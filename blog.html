@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Блог - HandmadeGift</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="index.html">HandmadeGift</a></div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="cart-icon">Корзина (<span class="cart-count">0</span>)</div>
+                <div class="burger" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 20px">
+        <h1 class="section-title">Блог о ручной работе</h1>
+        <div class="products">
+            <div class="product">
+                <img src="images/blog1.jpg" alt="Мыловарение">
+                <h3>Секреты домашнего мыловарения</h3>
+                <a href="article.html" class="btn">Читать далее</a>
+            </div>
+            <div class="product">
+                <img src="images/blog2.jpg" alt="Свечи">
+                <h3>Как выбрать ароматическую свечу</h3>
+                <a href="article2.html" class="btn">Читать далее</a>
+            </div>
+            <div class="product">
+                <img src="images/blog3.jpg" alt="Вязание">
+                <h3>Вязаные игрушки: мастер-класс</h3>
+                <a href="article.html" class="btn">Читать далее</a>
+            </div>
+            <div class="container">
+                <div style="background: white; padding: 40px; border-radius: 15px; border: 2px solid #E5989B; margin-top: 30px; width: 100%;">
+                    <h2 style="text-align: center; margin-bottom: 25px; color: #6B4F47;">Калькулятор материалов для мастера</h2>
+
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end;">
+
+                        <div style="flex: 2; min-width: 200px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: bold;">Объем одной свечи (мл):</label>
+                            <input type="number" id="vol" value="100" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                        </div>
+
+                        <div style="flex: 2; min-width: 200px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: bold;">Количество свечей (шт):</label>
+                            <input type="number" id="qty" value="1" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                        </div>
+
+                        <div style="flex: 1; min-width: 180px;">
+                            <button class="btn" onclick="calculateCandle()" style="width: 100%; height: 45px; background: #6B4F47; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">
+                                Рассчитать
+                            </button>
+                        </div>
+
+                        <div id="res" style="flex: 2; min-width: 200px; background: #F9F3F0; padding: 10px 20px; border-radius: 8px; text-align: center; display: none; border: 1px dashed #E5989B;">
+                            <span style="font-size: 14px; color: #6B4F47;">Вам потребуется воска:</span><br>
+                            <strong style="color: #E5989B; font-size: 22px;"><span id="wax-sum">0</span> г.</strong>
+                        </div>
+
+                    </div>
+                    <p style="margin-top: 15px; font-size: 12px; color: #999; text-align: center;">* Расчет произведен с учетом плотности соевого воска (0.86 г/мл)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-col">
+                    <h3>HandmadeGift</h3>
+                    <p style="opacity: 0.8;">Подарки ручной работы с душой.</p>
+                </div>
+
+
+                <div class="footer-col center">
+                    <h3>Навигация</h3>
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+
+
+                <div class="footer-col right">
+                    <h3>Контакты</h3>
+                    <p>+7 (999) 999-999-67</p>
+                    <p>batsura@handmadegift.ru</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; font-size: 12px;">
+                © <span class="current-year">2026</span> HandmadeGift. Все права защищены.
+            </div>
+        </div>
+    </footer>
+    <div id="cart-modal" style="display:none; position:fixed; top:70px; right:20px; width:300px; background:white; border:2px solid #6B4F47; padding:20px; z-index:1000; border-radius:15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+        <h3 style="margin-bottom:15px; color:#6B4F47;">Ваша корзина</h3>
+
+        <div id="cart-list" style="max-height:300px; overflow-y:auto; margin-bottom:15px; border-bottom:1px solid #eee;">
+        </div>
+
+        <div style="padding-top:10px; display:flex; justify-content:space-between; align-items:center;">
+            <strong>Итого:</strong>
+            <strong style="color:#E5989B;"><span id="cart-total">0</span> ₽</strong>
+        </div>
+
+        <button class="btn" onclick="document.getElementById('cart-modal').style.display='none'" style="width:100%; margin-top:15px; background:#6B4F47; cursor:pointer;">Закрыть</button>
+    </div>
+    <script src="Script2.js"></script>
+</body>
+</html>

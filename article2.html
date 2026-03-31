@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Статья - HandmadeGift</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="index.html">HandmadeGift</a></div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="cart-icon">Корзина (<span class="cart-count">0</span>)</div>
+                <div class="burger" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 20px; max-width: 800px; margin: 0 auto;">
+        <h1>Секреты домашнего мыловарения</h1>
+        <p style="color: #999;">15 марта 2026 | Автор: Анна Петрова</p>
+
+        <img src="images/blog2.jpg" alt="Свечи" style="width: 100%; border-radius: 15px; margin: 20px 0;">
+
+        <h2>Как выбрать апрматическую свечу?</h2>
+        <p>Ароматические свечи — это простой способ мгновенно изменить атмосферу в доме, настроиться на отдых или создать уют для продуктивной работы. Правильно выбранная свечь будет радовать вас чистым ароматом без вреда для здоровья.</p>
+
+        <h2>На что обратить внимание?</h2>
+        <p>При выборе смотрите на состав воска: лучше выбирать натуральный соевый, кокосовый или пчелиный воск. Также важен фитиль (хлопковый или деревянный для уютного треска) и качественные аромамасла в составе.</p>
+
+        <h2>Как найти свой аромат?</h2>
+        <p>1. Для спальни выбирайте лаванду или сандал. 2. Для кухни подойдут цитрусовые или пряные ноты. 3. В гостиную — древесные или цветочные композиции. 4. Обращайте внимание на интенсивность: для маленьких комнат берите свечи с одним фитилем.</p>
+
+        <div style="background: #f9f0ed; padding: 20px; border-radius: 15px; margin: 30px 0;">
+            <h3>Похожие статьи</h3>
+            <ul><li>Секреты домашнего мыловарения</li><li>Вязаные игрушки: мастер-класс</li><li>Создаем открытку в технике скрапбукинг</li></ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-col">
+                    <h3>HandmadeGift</h3>
+                    <p style="opacity: 0.8;">Подарки ручной работы с душой.</p>
+                </div>
+
+
+                <div class="footer-col center">
+                    <h3>Навигация</h3>
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+
+
+                <div class="footer-col right">
+                    <h3>Контакты</h3>
+                    <p>+7 (999) 999-999-67</p>
+                    <p>batsura@handmadegift.ru</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; font-size: 12px;">
+                © <span class="current-year">2026</span> HandmadeGift. Все права защищены.
+            </div>
+        </div>
+    </footer>
+    <div id="cart-modal" style="display:none; position:fixed; top:70px; right:20px; width:300px; background:white; border:2px solid #6B4F47; padding:20px; z-index:1000; border-radius:15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+        <h3 style="margin-bottom:15px; color:#6B4F47;">Ваша корзина</h3>
+
+        <div id="cart-list" style="max-height:300px; overflow-y:auto; margin-bottom:15px; border-bottom:1px solid #eee;">
+        </div>
+
+        <div style="padding-top:10px; display:flex; justify-content:space-between; align-items:center;">
+            <strong>Итого:</strong>
+            <strong style="color:#E5989B;"><span id="cart-total">0</span> ₽</strong>
+        </div>
+
+        <button class="btn" onclick="document.getElementById('cart-modal').style.display='none'" style="width:100%; margin-top:15px; background:#6B4F47; cursor:pointer;">Закрыть</button>
+    </div>
+    <script src="Script2.js"></script>
+</body>
+</html>

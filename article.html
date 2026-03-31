@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Статья - HandmadeGift</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="index.html">HandmadeGift</a></div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="cart-icon">Корзина (<span class="cart-count">0</span>)</div>
+                <div class="burger" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 20px; max-width: 800px; margin: 0 auto;">
+        <h1>Секреты домашнего мыловарения</h1>
+        <p style="color: #999;">15 марта 2026 | Автор: Анна Петрова</p>
+
+        <img src="images/blog1.jpg" alt="Мыловарение" style="width: 100%; border-radius: 15px; margin: 20px 0;">
+
+        <h2>Почему стоит попробовать мыловарение?</h2>
+        <p>Создание мыла своими руками — это увлекательное хобби, которое позволяет не только расслабиться, но и получить уникальный продукт, идеально подходящий для вашей кожи.</p>
+
+        <h2>Что нужно для начала?</h2>
+        <p>Для приготовления мыла в домашних условиях вам понадобятся: мыльная основа, базовые масла, эфирные масла для аромата, натуральные красители, формы для мыла и спирт для удаления пузырьков.</p>
+
+        <h2>Пошаговый мастер-класс</h2>
+        <p>1. Растопите мыльную основу. 2. Добавьте базовые масла. 3. Введите эфирные масла и красители. 4. Перемешайте и разлейте по формам. 5. Сбрызните спиртом. 6. Оставьте застывать на 2-3 часа.</p>
+
+        <div style="background: #f9f0ed; padding: 20px; border-radius: 15px; margin: 30px 0;">
+            <h3>Похожие статьи</h3>
+            <ul><li><a href="article2.html" style="text-decoration: none; color: #E5989B;">Как выбрать ароматическую свечу</a></li><li>Вязаные игрушки: мастер-класс</li><li>Создаем открытку в технике скрапбукинг</li></ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-col">
+                    <h3>HandmadeGift</h3>
+                    <p style="opacity: 0.8;">Подарки ручной работы с душой.</p>
+                </div>
+
+
+                <div class="footer-col center">
+                    <h3>Навигация</h3>
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+
+
+                <div class="footer-col right">
+                    <h3>Контакты</h3>
+                    <p>+7 (999) 999-999-67</p>
+                    <p>batsura@handmadegift.ru</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; font-size: 12px;">
+                © <span class="current-year">2026</span> HandmadeGift. Все права защищены.
+            </div>
+        </div>
+    </footer>
+    <div id="cart-modal" style="display:none; position:fixed; top:70px; right:20px; width:300px; background:white; border:2px solid #6B4F47; padding:20px; z-index:1000; border-radius:15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+        <h3 style="margin-bottom:15px; color:#6B4F47;">Ваша корзина</h3>
+
+        <div id="cart-list" style="max-height:300px; overflow-y:auto; margin-bottom:15px; border-bottom:1px solid #eee;">
+        </div>
+
+        <div style="padding-top:10px; display:flex; justify-content:space-between; align-items:center;">
+            <strong>Итого:</strong>
+            <strong style="color:#E5989B;"><span id="cart-total">0</span> ₽</strong>
+        </div>
+
+        <button class="btn" onclick="document.getElementById('cart-modal').style.display='none'" style="width:100%; margin-top:15px; background:#6B4F47; cursor:pointer;">Закрыть</button>
+    </div>
+    <script src="Script2.js"></script>
+</body>
+</html>
